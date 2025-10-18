@@ -1,0 +1,40 @@
+#!/bin/bash
+echo "----------------------------------------"
+echo "[i] Discord: @bbbxyzbbb."
+echo "[i] Youtube: @MinhTuYT-2222."
+echo "[i] Đang Tải"
+echo "[i] Script Này Chỉ Hỗ Trợ Ubuntu Và Debian!."
+if [ -f "/etc/debian_version" ]; then
+    echo "[i] Detected Debian based Linux."
+    echo "[i] We will now collect some information...."
+    sudo apt-get update > /dev/null 2>&1 || echo "[!] Could not update information."
+    echo "[i] We will now install git..."
+    sudo apt-get install -y git > /dev/null 2>&1 || echo "[!] Could not install git."
+    echo "[i] We will now install python3 and python3-pip..."
+    sudo apt-get install -y python3 python3-pip > /dev/null 2>&1 || echo "[!] Could not install python3."
+    echo "[i] We will now install ping..."
+    sudo apt-get install -y iputils-ping > /dev/null 2>&1 || echo "[!] Could not install ping."
+    echo "[i] We will now install nmap..."
+    sudo apt-get install -y nmap > /dev/null 2>&1 || echo "[!] Could not install nmap."
+    echo "[i] We will now install bluez..."
+    sudo apt-get install -y bluez > /dev/null 2>&1 || echo "[!] Could not install bluez."
+    echo "[i] We will now install aircrack-ng..."
+    sudo apt-get install -y aircrack-ng > /dev/null 2>&1 || echo "[!] Could not install aircrack-ng."
+    echo "[i] We will now install dsniff..."
+    sudo apt-get install -y dsniff > /dev/null 2>&1 || echo "[!] Could not install dsniff."
+    echo "[i] We will now install psmisc..."
+    sudo apt-get install -y psmisc > /dev/null 2>&1 || echo "[!] Could not install psmisc."
+    echo "[i] We will now download XyZmtu..."
+    sudo git clone https://github.com/minhtuyt8899/xyzmtu.git > /dev/null 2>&1 || echo "[!] Could not download XyZmtu."
+    cd xyzmtu > /dev/null 2>&1
+    echo "[i] We will now install requirements..."
+    sudo pip3 install -r requirements.txt  > /dev/null 2>&1 || echo "[!] Could not install the requirements."
+    echo "[i] We will now install XyZmtu..."
+    sudo bash ./install_to_bin.sh || echo "[!] Could not install XyZmtu."
+else
+    echo "[!] Script Này Chỉ Hỗ Trợ Ubuntu Và Debian!."
+    echo "[!] Hệ Điều Hành Linux Không Được Hỗ Trợ, Hãy Dùng Ubuntu Hoặc Debian!."
+fi
+
+echo "[i] Đã Cài Xong Các Gói Cần Thiết"
+exit 0
