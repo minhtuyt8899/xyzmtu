@@ -307,7 +307,7 @@ C_Bo-----------------------------------------------------------C_W""")
 		try:
 			chdir("/tmp")
 			system("sudo git clone https://github.com/minhtuyt8899/xyzmtu.git")
-			chdir("/tmp/xyzmtu-main/")
+			chdir("/tmp/xyzmtu/")
 			system("sudo bash ./install_to_bin.sh")
 			print("[i] Deleting the temporary stored XyZmtu...")
 			system("sudo rm -rf -i /tmp/xyzmtu/")
