@@ -26,7 +26,7 @@ if [ -f "/etc/debian_version" ]; then
     sudo apt-get install -y psmisc > /dev/null 2>&1 || echo "[!] Could not install psmisc."
     echo "[i] We will now download XyZmtu..."
     sudo git clone https://github.com/minhtuyt8899/xyzmtu.git > /dev/null 2>&1 || echo "[!] Could not download XyZmtu."
-    cd xyzmtu-main > /dev/null 2>&1
+    cd xyzmtu > /dev/null 2>&1
     echo "[i] We will now install requirements..."
     sudo pip3 install -r requirements.txt  > /dev/null 2>&1 || echo "[!] Could not install the requirements."
     echo "[i] We will now install XyZmtu..."
