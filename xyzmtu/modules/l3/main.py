@@ -5,7 +5,7 @@ from threading import Thread
 from time import sleep
 
 import requests
-from CLIF_Framework.framework import event, tools  # noqa: I900
+from CLIF_Framework.framework import event, tools
 
 try:
 	from os import geteuid
