@@ -86,7 +86,7 @@ C_Bo-----------------------------------------------------------C_W""")
 		event.commands(self.help, "help")
 		event.parser(self.run_debug_arg, "$")
 		event.parser(self.run_shell_arg, ".")
-		event.help(["exit", "quit", "e", "q"], "Exit Raven-Storm.")
+		event.help(["exit", "quit", "e", "q"], "Exit XyZmtu.")
 		event.help("help", "View all commands.")
 		event.help(".", "Run a shell command.")
 		event.help("clear", "Clear the screen.")
@@ -188,7 +188,7 @@ C_Bo-----------------------------------------------------------C_W""")
 	@event.command
 	def run():
 		data = {"agreed": False, "commands": [""]}
-		app = flask.Flask("Raven-Storm-Server")
+		app = flask.Flask("XyZmtu-Server")
 
 		@app.route('/get/com<pos>', methods=["GET", "POST"])
 		def command_get(pos=0):
